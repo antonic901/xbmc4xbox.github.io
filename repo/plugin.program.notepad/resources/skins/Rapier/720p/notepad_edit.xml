@@ -1,0 +1,95 @@
+<window>
+    <defaultcontrol>30020</defaultcontrol>	
+	<controls>
+		<!-- ** Background image ** -->
+		<control type="image">
+			<description>Background Image</description>
+			<posx>0</posx>
+			<posy>45</posy>
+			<width>1280</width>
+			<height>675</height>
+			<include>BackgroundProgramsDefaultImage</include>
+		</control>
+		
+		<!--  ** Label (file name) ** -->
+		<control type="label" id="30010">
+			<posx>45</posx>
+			<posy>50</posy>
+			<font>ListFont</font>
+		</control>
+		
+		<!-- ** List (text lines) ** -->
+		<control type="list" id="30020">
+			<posx>3</posx>
+			<posy>80</posy>
+			<width>1240</width>
+			<height>630</height>
+			<visible>true</visible>
+			<orientation>vertical</orientation> 
+			<onup>30020</onup>
+			<ondown>30020</ondown>
+			<onright>30030</onright>
+			<pagecontrol>30030</pagecontrol>
+			
+			<itemlayout height="30"> 
+				<control type="label">
+		            <posx>35</posx>
+		            <posy>5</posy>
+		            <width>40</width>
+		            <height>30</height>
+		            <align>right</align>
+		            <font>ListFont</font>
+		            <info>ListItem.Label</info>
+		        </control>
+				<control type="label">
+		            <posx>45</posx>
+		            <posy>5</posy>
+		            <width>1190</width>
+		            <height>30</height>
+		            <align>left</align>
+		            <font>ListFont</font>
+		            <info>ListItem.Label2</info>
+		        </control>
+	        </itemlayout>
+	        
+			<focusedlayout height="30" > 
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1250</width>
+					<height>30</height>
+					<texture border="7">button-list-focus.png</texture>
+					<visible>Control.HasFocus(30020)</visible>
+				</control>
+				<control type="label">
+					<posx>35</posx>
+					<posy>5</posy>
+					<width>40</width>
+					<height>30</height>
+					<align>right</align>
+					<font>ListFont</font> 
+					<info>ListItem.Label</info>
+				</control>
+				<control type="label">
+					<posx>45</posx>
+					<posy>5</posy>
+					<width>1190</width>
+					<height>30</height>
+					<align>left</align>
+					<font>ListFont</font>
+					<info>ListItem.Label2</info>
+				</control>
+			</focusedlayout>	        
+		</control>
+		
+		<!-- List Scrollbar -->
+		<control type="scrollbar" id="30030">
+			<posx>1255</posx>
+			<posy>80</posy>
+			<height>630</height>
+			<onleft>30020</onleft>
+			<showonepage>false</showonepage>
+			<visible>Control.IsVisible(30020)</visible>
+		</control>			
+	</controls>
+</window>

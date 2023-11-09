@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <!--
+   * Main
+   -->
+  <string id="30000">Notepad</string>
+  <string id="30001">Apri...</string>
+  
+  <!-- 
+   * Settings labels 
+   -->
+  <string id="30100">Versione</string>
+  <string id="30101">Autore</string>
+  <string id="30102">Sito Web</string>
+  
+  <!-- 
+   * Labels
+   -->
+  <string id="30200">Apri</string>
+  <string id="30201">Non trovo %s</string>
+  <string id="30202">Caricamento...</string>
+  <string id="30203">Vuoi salvare le modifiche?</string>
+   
+</strings>

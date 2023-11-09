@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+  <!--
+   * Main
+   -->
+  <string id="30000">Thumbnails</string>
+  <string id="30001">Clean</string>
+
+  <!-- 
+   * Settings labels 
+   -->
+  <string id="30100">Version</string>
+  <string id="30101">Author</string>
+  <string id="30102">Website</string>
+  
+  <!--
+   * Clean
+   -->
+  <string id="30201">Scanning:</string>
+  <string id="30202">Cleaning:</string>
+
+</strings>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!-- Build file for Notepad - XBMC Plugin -->
+<project name="Notepad" default="package" basedir=".">
+	<!--
+	 * Variables
+	 -->
+	<property  name="project.version" value="1.4"/>
+	
+	<!--
+	 * Package plugin for distribution
+	 -->
+	<target name="package" >
+		<!-- Init -->
+		<delete dir="./zip"/>
+		<mkdir  dir="./zip/${ant.project.name}"/>
+		
+		<!-- Copy entire project in a temporary location... -->
+		<copy todir="./zip/${ant.project.name}">
+			<fileset dir="../../../${ant.project.name}/">
+				<exclude name=".svn"/>
+				<exclude name="**/*.pyo"/>
+				<exclude name="resources/dev/**"/>
+				<exclude name=".project"/>
+				<exclude name=".pydevproject"/>
+			</fileset>
+		</copy>
+		
+		<!-- Zip up... -->
+		<zip destfile="./zip/${ant.project.name} v${project.version}.zip"
+		     basedir="./zip"
+			 level="9" />
+		
+		<!-- Clean up -->
+		<delete dir="./zip/${ant.project.name}"/>
+	</target>
+	
+</project>
