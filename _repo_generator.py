@@ -250,7 +250,7 @@ class Generator:
         tree = ElementTree.parse(os.path.join(self.release_path, addon_id, "addon.xml"))
         root = tree.getroot()
 
-        copyfiles = ["addon.xml"]
+        copyfiles = ["addon.xml", "icon.png", "icon.jpg", "fanart.png", "fanart.jpg"]
         for ext in root.findall("extension"):
             if ext.get("point") in ["xbmc.addon.metadata", "kodi.addon.metadata"]:
                 assets = ext.find("assets")
