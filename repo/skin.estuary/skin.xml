@@ -1,0 +1,15 @@
+<skin>
+	<defaultresolution>1080i</defaultresolution>
+	<defaultresolutionwide>1080i</defaultresolutionwide>
+	<defaultthemename>Textures.xpr</defaultthemename>
+	<version>2.12</version>
+	<effectslowdown>.75</effectslowdown>
+  <debugging>true</debugging>
+	<credits>
+		<skinname>Estuary</skinname>
+		<name>Estuary skin by phil65, Ichabod Fletchman</name>
+		<name>XBOX port by antonic901</name>
+    <version>3.0.10</version>
+    <description>Downloaded from Kodi's master branch on 31.05.2023.</description>
+	</credits>
+</skin>
