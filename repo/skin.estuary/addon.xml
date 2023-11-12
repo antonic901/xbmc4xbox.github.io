@@ -17,6 +17,7 @@
   <extension point="xbmc.addon.metadata">
     <summary>Estuary skin by phil65. (Kodi&apos;s default skin)</summary>
     <description>Estuary is the default skin for Kodi 17.0 and above. It attempts to be easy for first time Kodi users to understand and use.</description>
-    <platform>all</platform>
+    <platform>xbox</platform>
+    <disclaimer>WIP: Port to XBMC4Xbox</disclaimer>
   </extension>
 </addon>
