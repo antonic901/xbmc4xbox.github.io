@@ -350,12 +350,10 @@ class Generator:
             if is_zip:
               with open(addons_xml_path, "rb") as f:
                   m = hashlib.md5(f.read()).hexdigest()
-                  self._save_file(m, file=md5_path)     
             else:
               with open(addons_xml_path, "r", encoding="utf-8") as f:
                   m = hashlib.md5(f.read().encode("utf-8")).hexdigest()
-                  self._save_file(m, file=md5_path)
-
+            self._save_file(m, file=md5_path)
             return True
         except Exception as e:
             print(
