@@ -234,6 +234,7 @@ class Generator:
 
             zip.close()
             size = convert_bytes(os.path.getsize(final_zip))
+            self._generate_md5_file(final_zip, f"{final_zip}.md5", True)
             print(
                 "Zip created for {} ({}) - {}".format(
                     color_text(addon_id, 'cyan'),
@@ -341,14 +342,19 @@ class Generator:
                     )
                 )
 
-    def _generate_md5_file(self, addons_xml_path, md5_path):
+    def _generate_md5_file(self, addons_xml_path, md5_path, is_zip=False):
         """
         Generates a new addons.xml.md5 file.
         """
         try:
-            with open(addons_xml_path, "r", encoding="utf-8") as f:
-                m = hashlib.md5(f.read().encode("utf-8")).hexdigest()
-                self._save_file(m, file=md5_path)
+            if is_zip:
+              with open(addons_xml_path, "rb") as f:
+                  m = hashlib.md5(f.read()).hexdigest()
+                  self._save_file(m, file=md5_path)     
+            else:
+              with open(addons_xml_path, "r", encoding="utf-8") as f:
+                  m = hashlib.md5(f.read().encode("utf-8")).hexdigest()
+                  self._save_file(m, file=md5_path)
 
             return True
         except Exception as e:
